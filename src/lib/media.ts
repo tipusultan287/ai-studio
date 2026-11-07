@@ -124,7 +124,7 @@ export async function saveToDevice(uri: string): Promise<boolean> {
   const perm = await MediaLibrary.requestPermissionsAsync(true);
   if (!perm.granted) return false;
   const local = /^https?:/.test(uri) ? await persistMedia(uri, 'image') : uri;
-  await MediaLibrary.saveToLibraryAsync(local);
+  await MediaLibrary.Asset.create(local);
   return true;
 }
 

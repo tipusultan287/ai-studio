@@ -23,7 +23,7 @@ export function ProgressOverlay({
 }) {
   const spin = useSharedValue(0);
   useEffect(() => {
-    if (visible) spin.value = withRepeat(withTiming(1, { duration: 2400, easing: Easing.linear }), -1);
+    if (visible) spin.set(withRepeat(withTiming(1, { duration: 2400, easing: Easing.linear }), -1));
   }, [visible, spin]);
   const ring = useAnimatedStyle(() => ({ transform: [{ rotate: `${spin.value * 360}deg` }] }));
   if (!visible) return null;

@@ -3,7 +3,7 @@ import type { LucideIcon } from 'lucide-react-native';
 import { ActivityIndicator, StyleProp, StyleSheet, View, ViewStyle } from 'react-native';
 import { ScalePressable } from './Pressable';
 import { Text } from './Text';
-import { colors, gradients, radius } from './theme';
+import { colors, gradients } from './theme';
 
 type Variant = 'primary' | 'ai' | 'secondary' | 'ghost' | 'danger';
 export type ButtonProps = {
@@ -68,4 +68,3 @@ const styles = StyleSheet.create({
   base: { overflow: 'hidden' },
   row: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8 },
 });
-export { radius };
